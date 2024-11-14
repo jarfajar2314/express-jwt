@@ -3,19 +3,16 @@ const express = require("express");
 const cors = require("cors");
 const { initializeDatabase } = require("./models");
 const swaggerUi = require("swagger-ui-express");
-const swaggerSpec = require("./config/swagger.config").swaggerSpec;
+const { swaggerSpec } = require("./config/swagger.config");
 
 const app = express();
 
-const corsPORT = process.env.CORS_PORT || 8081;
 let corsOptions = {
-  origin: `http://localhost:${corsPORT}`,
+  origin: "*",
 };
 
 app.use(cors(corsOptions));
-
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true }));
 
 // Swagger setup

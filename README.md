@@ -22,7 +22,6 @@ DB_PASSWORD = 123
 # Server Config
 SERVER_ADDRESS = localhost
 SERVER_PORT = 8000
-CORS_PORT = 8082
 SECRET_KEY = this-is-secret-key
 ```
 
@@ -32,7 +31,6 @@ Clone this repository then run
 
 ```
 npm install
-npm install --save-dev
 ```
 
 After all packages installed, place the .env files on this app folder. The directory should be like this
